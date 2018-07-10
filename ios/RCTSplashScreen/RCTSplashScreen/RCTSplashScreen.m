@@ -30,6 +30,10 @@ RCT_EXPORT_MODULE(SplashScreen)
     [rootView setLoadingView:view];
 }
 
++(BOOL)requiresMainQueueSetup {
+    return YES;
+ }
+
 RCT_EXPORT_METHOD(close:(NSDictionary *)options) {
     if (!rootView) {
         return;
